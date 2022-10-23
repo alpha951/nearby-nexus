@@ -1,4 +1,7 @@
-# Getting Started with Create React App
+<h2>A React and Material UI based web app to explore Hotels, Restaurents and attraction near by. Powered by Google Map React API and Travel Advisor Rapid API
+
+</h2>
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
