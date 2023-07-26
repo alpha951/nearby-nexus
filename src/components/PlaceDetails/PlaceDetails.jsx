@@ -58,8 +58,7 @@ const PlaceDetails = ({ place, selected, refProp }) => {
             my={1}
             display="flex"
             justifyContent="space-between"
-            alignItems="center"
-          >
+            alignItems="center">
             <img src={award.images.small} alt={award.display_name} />
             <Typography variant="subtitle2" color="textSecondary">
               {award.display_name}
@@ -74,8 +73,7 @@ const PlaceDetails = ({ place, selected, refProp }) => {
             gutterBottom
             variant="body2"
             color="textSecondary"
-            className={classes.subtitle}
-          >
+            className={classes.subtitle}>
             <LocationOnIcon /> {place.address}
           </Typography>
         )}
@@ -84,8 +82,7 @@ const PlaceDetails = ({ place, selected, refProp }) => {
             gutterBottom
             variant="subtitle2"
             color="textSecondary"
-            className={classes.subtitle}
-          >
+            className={classes.subtitle}>
             <PhoneIcon /> {place.phone}
           </Typography>
         )}
@@ -93,15 +90,13 @@ const PlaceDetails = ({ place, selected, refProp }) => {
           <Button
             size="small"
             color="primary"
-            onClick={() => window.open(place.web_url, "_blank")}
-          >
+            onClick={() => window.open(place.web_url, "_blank")}>
             Trip Advisor
           </Button>
           <Button
             size="small"
             color="primary"
-            onClick={() => window.open(place.website, "_blank")}
-          >
+            onClick={() => window.open(place.website, "_blank")}>
             Website
           </Button>
         </CardActions>

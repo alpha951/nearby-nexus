@@ -26,29 +26,12 @@ export const getWeatherData = async (lat, lng) => {
     try {
         const apiKey = process.env.REACT_APP_OPEN_WEATHER_API_KEY;
         const { data } = await axios.get(
-            `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lng}&appid=${apiKey}`
+          `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lng}&exclude=minutely,hourly,daily&appid=${apiKey}`
         );
-        // console.log(data);
+        console.log(data);
         return data;
     } catch (error) {
         console.log(error);
     }
 };
 
-// export const getWeatherData = async (lat, lng) => {
-//     try {
-//         if (lat && lng) {
-//             const { data } = await axios.get('https://community-open-weather-map.p.rapidapi.com/find', {
-//                 params: { lat, lon: lng },
-//                 headers: {
-//                     'x-rapidapi-key': process.env.REACT_APP_RAPID_API_WEATHER_API_KEY,
-//                     'x-rapidapi-host': 'community-open-weather-map.p.rapidapi.com',
-//                 },
-//             });
-
-//             return data;
-//         }
-//     } catch (error) {
-//         console.log(error);
-//     }
-// };

@@ -35,15 +35,13 @@ const Map = ({
           setCoordinates({ lat: e.center.lat, lng: e.center.lng });
           setBounds({ ne: e.marginBounds.ne, sw: e.marginBounds.sw });
         }}
-        onChildClick={(child) => setChildClicked(child)}
-      >
+        onChildClick={(child) => setChildClicked(child)}>
         {places?.map((place, i) => (
           <div
             className={classes.markerContainer}
             lat={Number(place.latitude)}
             lng={Number(place.longitude)}
-            key={i}
-          >
+            key={i}>
             {!isDesktop ? (
               <LocationOnOutlinedIcon color="primary" fontSize="large" />
             ) : (
@@ -51,8 +49,7 @@ const Map = ({
                 <Typography
                   className={classes.typography}
                   variant="subtitle2"
-                  gutterBottom
-                >
+                  gutterBottom>
                   {place.name}
                 </Typography>
                 <img
@@ -65,21 +62,25 @@ const Map = ({
                   }
                 />
                 <Rating size="small" value={Number(place.rating)} readOnly />
+                  <div  lat={weatherData.lat} lng={weatherData.lon}>
+                    <img
+                      src={`https://openweathermap.org/img/wn/${weatherData.current.weather[0].icon}.png`}
+                      height="40px"
+                      width = "40px"
+                      alt={weatherData.current.weather[0].description}
+                    />
+                  </div>
+
               </Paper>
             )}
           </div>
         ))}
-        {weatherData?.list?.map((data, i) => (
-          <div key={i} lat={data.coordinates.lat} lng={data.coordinates.lon}>
-            <img
-              src={`https://openweathermap.org/img/wn/${data.weather[0].icon}.png`}
-              height="100px"
-              alt={data.weather[0].description}
-            />
-          </div>
-        ))}
+        {console.log(weatherData)}
+        {/* {console.log(weatherData.current.weather[0].icon) } */}
+       
       </GoogleMapReact>
     </div>
   );
 };
 export default Map;
+
