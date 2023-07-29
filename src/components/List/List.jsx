@@ -18,7 +18,7 @@ const List = ({
   type,
   setType,
   rating,
-  setRating,
+  setRating='0.0',
 }) => {
   const classes = useStyels();
 
@@ -34,7 +34,7 @@ const List = ({
 
   return (
     <div className={classes.container}>
-      <Typography variant="h4">
+      <Typography variant="h4" style={{fontFamily:'Lumanosimo'}}>
         Restaurants, Hotels & Attractions around you...
       </Typography>
       {isLoading ? (

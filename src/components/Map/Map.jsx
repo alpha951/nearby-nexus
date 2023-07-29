@@ -19,12 +19,15 @@ const Map = ({
 
   return (
     <div className={classes.mapContainer}>
+
+      {/* // TODO Main logic of Map component in attributes */}
+
       <GoogleMapReact
         bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAPS_APi_KEY }}
         defaultCenter={coordinates}
         center={coordinates}
         defaultZoom={14}
-        margin={[50, 50, 50, 50]}
+        margin={[10, 50, 50, 50]}
         options={{
           disableDefaultUI: true,
           zoomControl: true,
@@ -75,7 +78,7 @@ const Map = ({
             )}
           </div>
         ))}
-        {console.log(weatherData)}
+        {/* {console.log(weatherData)} */}
         {/* {console.log(weatherData.current.weather[0].icon) } */}
        
       </GoogleMapReact>
