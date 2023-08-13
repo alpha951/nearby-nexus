@@ -10,7 +10,17 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&{ key: process.env.REACT_APP_GOOGLE_MAPS_APi_KEY }" async></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyAPeft1WWNB-Ds1qtV3Zo-amH5JSEWOEkU&callback=Function.prototype" async></script>
+
+    <!-- <script async>
+      // Load the Google Maps API key from the environment variable
+      const apiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
+    
+      const script = document.createElement('script');
+      script.src = `https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${apiKey}&callback=Function.prototype`;
+      document.body.appendChild(script);
+    </script> -->
+    
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,3 +34,4 @@
     <div id="root"></div>
   </body>
 </html>
+<!--  -->
